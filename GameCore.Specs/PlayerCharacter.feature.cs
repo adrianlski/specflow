@@ -175,6 +175,116 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Total magical power")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Total magical power")]
+        public virtual void TotalMagicalPower()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Total magical power", ((string[])(null)));
+#line 39
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "value",
+                        "power"});
+            table2.AddRow(new string[] {
+                        "Ring",
+                        "200",
+                        "100"});
+            table2.AddRow(new string[] {
+                        "Amulet",
+                        "400",
+                        "200"});
+            table2.AddRow(new string[] {
+                        "Gloves",
+                        "100",
+                        "400"});
+#line 40
+ testRunner.Given("I have the following magical items", ((string)(null)), table2, "Given ");
+#line 45
+ testRunner.Then("My total magical power should be 700", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Reading a restore health scroll when over tired has no effect")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Reading a restore health scroll when over tired has no effect")]
+        public virtual void ReadingARestoreHealthScrollWhenOverTiredHasNoEffect()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Reading a restore health scroll when over tired has no effect", ((string[])(null)));
+#line 47
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 48
+ testRunner.Given("I last slept 3 days ago", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 49
+ testRunner.When("I take 40 damage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
+  testRunner.And("I read a restore health scroll", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+  testRunner.Then("My health should now be 60", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Weapons are worth money")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Weapons are worth money")]
+        public virtual void WeaponsAreWorthMoney()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Weapons are worth money", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "name",
+                        "value"});
+            table3.AddRow(new string[] {
+                        "Sword",
+                        "50"});
+            table3.AddRow(new string[] {
+                        "Pick",
+                        "40"});
+            table3.AddRow(new string[] {
+                        "Knife",
+                        "10"});
+#line 54
+ testRunner.Given("I have the following weapons", ((string)(null)), table3, "Given ");
+#line 59
+ testRunner.Then("My weapons should be worth 100", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Elf race characters don\'t lose magical item power")]
+        [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
+        [Xunit.TraitAttribute("Description", "Elf race characters don\'t lose magical item power")]
+        public virtual void ElfRaceCharactersDonTLoseMagicalItemPower()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Elf race characters don\'t lose magical item power", ((string[])(null)));
+#line 61
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 62
+ testRunner.Given("I\'m an Elf", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 63
+ testRunner.And("I have an Amulet with a power of 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 64
+ testRunner.When("I use a magical amulet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 65
+ testRunner.Then("The Amulet power should not be reduced", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
